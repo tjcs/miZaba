@@ -1,0 +1,53 @@
+<!-- 
+  This template gets placed in the Pet tab's <nav-view> directive.
+  It was wired up in the app config (app.js) 
+  The 'pets' data comes from its $scope within PetIndexCtrl (controller.js)
+-->
+<view title="'Zaba Financiera'">
+  <content has-header="true" has-tabs="true">
+
+<style>
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+</style>
+
+    <h1>Hola!</h1>
+
+    <h3>Welcome to your new friend: Zaba. We're here to help with your financial life.</h3>
+    <br>
+
+<!-- not working for now -->
+         <div ng-switch="user.provider">
+            <img ng-switch-when="facebook" ng-src="{{user.thirdPartyUserData.picture.data.url}}"/>
+            <img ng-switch-when="google" ng-src="{{user.thirdPartyUserData.picture}}" height="100" width="100"/>
+            <img ng-switch-when="twitter" ng-src="{{user.thirdPartyUserData.profile_image_url}}"/>
+        </div>
+
+<!--- button that sends you to Apply for a loan-->
+<button class="button button-large button-full button-positive" ui-sref="adopt">
+  Apply for a Loan
+</button>
+<!--- button that sends you to About Zaba-->
+<button class="button button-large button-full button-calm" ui-sref="about">
+  About Zaba
+</button>
+<!--- button that sends you to Legal Information-->
+<button class="button button-large button-full button-royal" ui-sref="legal">
+  Legal Information
+</button>
+
+  </content>
+</view>

@@ -1,0 +1,141 @@
+<!--
+  This template loads for the 'tab.adopt' state (app.js)
+-->
+<view title="'Apply for a Loan'">
+  <content has-header="true" has-tabs="true">
+
+    <style>
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+</style>
+
+    <h1>Apply for a Loan</h1>
+
+<h4>How much do you need to borrow?</h4>
+
+<div class="item range range-positive">
+  <i class="icon ion-social-usd-outline"></i>
+  <input type="range" name="volume" min="0" max="10000" ng-model="adopter.rangeValue" ng-change="drag(rangeValue)">
+  <i class="icon ion-social-usd"></i>
+</div>
+
+<h4>{{adopter.rangeValue}} Pesos</h4>
+
+<br>
+
+<h4>Please tell us a little about yourself</h4>
+
+<ul class="list">
+
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="adopter.bizowner">
+     </label>
+     I own a business
+  </li>
+
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="adopter.employed">
+     </label>
+     I am employed
+  </li>
+
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="adopter.unemployed">
+     </label>
+     I am unemployed/retired
+  </li>
+
+</ul>
+
+<div class="list">
+
+  <a class="item item-icon-left">
+    <i class="icon ion-person-add"></i>
+  <label class="item item-input">
+    <input type="text" ng-model="adopter.nombre" placeholder="Nombre">
+  </label>
+  </a>
+
+  <a class="item item-icon-left">
+    <i class="icon ion-person"></i>
+  <label class="item item-input">
+    <input type="text" ng-model="adopter.apellidos" placeholder="Apellidos">
+  </label>
+  </a>
+
+  <a class="item item-icon-left">
+    <i class="icon ion-ios-telephone-outline"></i>
+  <label class="item item-input">
+    <input type="tel" ng-model="adopter.celular" placeholder="Celular">
+  </label>
+  </a>
+
+  <a class="item item-icon-left">
+    <i class="icon ion-email"></i>
+  <label class="item item-input">
+    <input type="email" ng-model="adopter.email" placeholder="Email">
+  </label>
+  </a>
+
+  <a class="item item-icon-left">
+    <i class="icon ion-calendar"></i>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Date of Birth</span>
+    <input type="date" ng-model="adopter.dob">
+  </label>
+  </a>
+
+  <a class="item item-icon-left">
+    <i class="icon ion-briefcase"></i>
+  <label class="item item-input">
+    <input type="text" ng-model="adopter.bizname" placeholder="Business Name">
+  </label>
+  </a>
+
+  <a class="item item-icon-left">
+    <i class="icon ion-location"></i>
+  <label class="item item-input">
+    <input type="text" ng-model="adopter.bizaddress" placeholder="Business Address">
+  </label>
+  </a>
+
+  <a class="item item-icon-left">
+    <i class="icon ion-social-usd"></i>
+  <label class="item item-input">
+    <input type="tel" ng-model="adopter.monthincome" placeholder="Monthly Income (Pesos)">
+  </label>
+  </a>
+
+  <label class="item item-input">
+    <textarea ng-model="adopter.bizdescrip" placeholder="Business Description"></textarea>
+  </label>
+
+  <label class="item item-input">
+    <textarea ng-model="adopter.whyloan" placeholder="Why you need a loan"></textarea>
+  </label>
+
+</div>
+
+<br>
+
+      <button class="button button-positive button-block" href="#/tab/about" ng-click="createAdopter(adopter)">Done</button>
+
+    </div>
+  </content>
+</view>
