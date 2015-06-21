@@ -16,16 +16,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-    .state('adopt2', {
+    .state('tab.adopt2', {
       url: '/adopt2',
       views: {
-        'adopt2': {
+        'adopt2-tab': {
           templateUrl: 'templates/adopt2.html',
-          controller: 'AdoptCtrl2'
+          controller: 'AdoptCtrl'
         }
       }
     })
-    
+
     // setup an abstract state for the tabs directive
     .state('tab', {
       url: "/tab",
